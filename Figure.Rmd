@@ -1,14 +1,13 @@
 ---
-title: "Figure"
-author: "Luis Armando Figueroa"
-date: "2024-07-05"
-output: html_document
+title: "Plots like collaborations"
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(dirname(inputFile),'/README.md')) })
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 library(forestploter)
 library(openxlsx)
-
+library(rmarkdown)
 knitr::opts_chunk$set(fig.path = "Figures/", dev='svg')
 ```
 
