@@ -4,24 +4,26 @@ knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = e
 output: github_document
 ---
 
+<i>Plots for papers without context</i>
+
+This github will be about plots, figures, charts, foresplot and so on. All of these are part of collaboration with friends like [Oscar J. Ponce](https://twitter.com/PonceOJ), ...
+
+
+
 ```{r setup, include=FALSE}
 library(forestploter)
 library(openxlsx)
 library(rmarkdown)
 knitr::opts_chunk$set(fig.path = "Figures/", dev='svg')
 ```
-
-<i>Plots for papers without context</i>
-
-This github will be about plots, figures, charts, foresplot and so on. All of these are part of collaboration with friends like [Oscar J. Ponce](https://twitter.com/PonceOJ), 
-
-
+<br>
 <details>
 
 <summary><b>Figure 1 -</b> Figure about two different models NLP by Oscar and me</summary>
 
 <br>
-```{r figure, echo=FALSE, fig.height=5, fig.width=17, message=FALSE, warning=FALSE}
+
+```{r fig, echo=FALSE, fig.height=5, fig.width=17, message=FALSE, warning=FALSE}
 data <- read.xlsx("results_for_graph.xlsx")
 data$` ` <- paste(rep("                                 ", nrow(data)))
 colnames(data) <- c("outcome", "ca_method", "model", "mean", "low", "up", "p_value", '')
@@ -48,4 +50,5 @@ plot <- plot(p)
 
 plot
 ```
+
 </details>
